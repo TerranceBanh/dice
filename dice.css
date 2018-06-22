@@ -1,0 +1,200 @@
+/*==============================
+
+    Page Layout Classes
+
+==============================*/
+.container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.fit {
+    width:100%;
+}
+.center-text{
+    display:flex;
+    justify-content:space-around;
+}
+
+.fixed-height {
+    height: 250px
+}
+.dice-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+    .empty-die {
+        padding-top: 30px;
+        font-size: 160px;
+        font-weight: 600;
+    }
+    .die-size{
+        display:flex;
+        justify-content:space-around;
+        width: 100%;
+    }
+.number{
+    font-size: 5vh;
+    line-height: 0;
+}
+
+@media (max-height: 600px) {
+    .hide-text {
+        display:none;
+    }
+    .die-size{
+        line-height: 0.8;
+    }
+    .fixed-height {
+        height: 150px;
+        padding-bottom: 10px;
+    }
+    .empty-die {
+        padding-top: 0;
+        line-height: 0.8;
+    }
+}
+/*==============================
+
+    Button Classes
+
+==============================*/
+
+.btn {
+    position: relative;
+    border: none;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 3.4vh;
+    font-weight: 900;
+    outline: none;
+}
+    .btn:active {
+        top: 3px;
+        left: -3px;
+    }
+    .btn::before {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 0px;
+        left: -6px;
+    }
+        .btn:active::before {
+            top: 0px;
+            left: -3px;
+    }
+    .btn::after {
+        position: absolute;
+        display: block;
+        content: "";
+        bottom: -5px;
+        right: 0px;
+    }
+        .btn:active::after {
+            bottom: -3px;
+            right: 0px;
+        }
+
+.btn-green{
+    background: green;
+    box-shadow: -6px 5px 0 hsl(140, 100%, 10%);
+}
+    .btn-green:hover{
+        background: hsl(120, 100%, 20%);
+    }
+    .btn-green:active{
+        background: hsl(120, 100%, 15%);
+        box-shadow: -3px 3px 0 hsl(140, 100%, 10%);
+    }
+    .btn-green::before{
+        border: solid 5px transparent;
+        border-right: solid 6px hsl(140, 100%, 10%);
+        border-left-width: 0px;
+    }
+        .btn-green:active::before{
+            border: solid 3px transparent;
+            border-right: solid 3px hsl(140, 100%, 10%);
+            border-left-width: 0px;
+        }
+    .btn-green:after{
+        border: solid 6px transparent;
+        border-top: solid 5px hsl(140, 100%, 10%);
+        border-bottom-width: 0px;
+    }
+        .btn-green:active::after{
+            border: solid 3px transparent;
+            border-top: solid 3px hsl(140, 100%, 10%);
+            border-bottom-width: 0px;
+        }
+
+.btn-red{
+    background: red;
+    box-shadow: -6px 5px 0 hsl(0, 100%, 20%);
+}
+    .btn-red:hover{
+        background: hsl(0, 100%, 40%);
+    }
+    .btn-red:active{
+        background: hsl(0, 100%, 35%);
+        box-shadow: -3px 3px 0 hsl(0, 100%, 20%);
+    }
+    .btn-red::before{
+        border: solid 5px transparent;
+        border-right: solid 6px hsl(0, 100%, 20%);
+        border-left-width: 0px;
+    }
+        .btn-red:active::before{
+            border: solid 3px transparent;
+            border-right: solid 3px hsl(0, 100%, 20%);
+            border-left-width: 0px;
+        }
+    .btn-red:after{
+        border: solid 6px transparent;
+        border-top: solid 5px hsl(0, 100%, 20%);
+        border-bottom-width: 0px;
+    }
+        .btn-red:active::after{
+            border: solid 3px transparent;
+            border-top: solid 3px hsl(0, 100%, 20%);
+            border-bottom-width: 0px;
+        }
+
+.btn-blue{
+    background: hsl(220, 100%, 50%);
+    box-shadow: -6px 5px 0 hsl(220, 100%, 20%);
+}
+    .btn-blue:hover{
+        background: hsl(220, 100%, 43%);
+    }
+    .btn-blue:active{
+        background: hsl(220, 100%, 40%);
+        box-shadow: -3px 3px 0 hsl(220, 100%, 20%);
+    }
+    .btn-blue::before{
+        border: solid 5px transparent;
+        border-right: solid 6px hsl(220, 100%, 20%);
+        border-left-width: 0px;
+    }
+        .btn-blue:active::before{
+            border: solid 3px transparent;
+            border-right: solid 3px hsl(220, 100%, 20%);
+            border-left-width: 0px;
+        }
+    .btn-blue:after{
+        border: solid 6px transparent;
+        border-top: solid 5px hsl(220, 100%, 20%);
+        border-bottom-width: 0px;
+    }
+        .btn-blue:active::after{
+            border: solid 3px transparent;
+            border-top: solid 3px hsl(220, 100%, 20%);
+            border-bottom-width: 0px;
+        }
