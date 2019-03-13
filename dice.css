@@ -200,6 +200,7 @@
         }
 
 .bottom {
+    font-size: 10px;
     position: absolute;
     margin: 0 auto;
     bottom: 0;
