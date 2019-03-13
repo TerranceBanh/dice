@@ -1,6 +1,6 @@
 {
-  "name": "A Very Very Long Long Name",
-  "short_name": "Short Name",
+  "name": "Dice Generator",
+  "short_name": "Dice",
   "start_url": ".",
   "display": "standalone",
   "orientation": "portrait",
