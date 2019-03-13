@@ -198,9 +198,9 @@
             border-top: solid 3px hsl(220, 100%, 20%);
             border-bottom-width: 0px;
         }
+        .bottom {
 
-.bottom {
-    font-size: 10px;
+    font-size: 5px;
     position: absolute;
     margin: 0 auto;
     bottom: 0;
