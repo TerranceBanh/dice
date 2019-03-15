@@ -3,213 +3,269 @@
     Page Layout Classes
 
 ==============================*/
-.container{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    flex-direction:column;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
+
 .fit {
-    width:100%;
+  width: 100%;
 }
-.center-text{
-    display:flex;
-    justify-content:space-around;
+
+.center-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .fixed-height {
-    height: 250px
+  height: 250px;
 }
+
 .dice-box {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-    .empty-die {
-        padding-top: 30px;
-        font-size: 160px;
-        font-weight: 600;
-    }
-    .die-size{
-        display:flex;
-        justify-content:space-around;
-        width: 100%;
-    }
-.number{
-    font-size: 5vh;
-    line-height: 0;
+
+.empty-die {
+  padding-top: 30px;
+  font-size: 160px;
+  font-weight: 600;
+}
+
+.die-size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.number {
+  font-size: 5vh;
+  line-height: 0;
 }
 
 @media (max-height: 600px) {
-    .hide-text {
-        display:none;
-    }
-    .die-size{
-        line-height: 0.8;
-    }
-    .fixed-height {
-        height: 150px;
-        padding-bottom: 10px;
-    }
-    .empty-die {
-        padding-top: 0;
-        line-height: 0.8;
-    }
+  .hide-text {
+    display: none;
+  }
+  .die-size {
+    line-height: 0.8;
+  }
+  .fixed-height {
+    height: 150px;
+    padding-bottom: 10px;
+  }
+  .empty-die {
+    padding-top: 0;
+    line-height: 0.8;
+  }
 }
+
 /*==============================
 
     Button Classes
 
 ==============================*/
-
 .btn {
-    position: relative;
-    border: none;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 3.4vh;
-    font-weight: 900;
-    outline: none;
+  position: relative;
+  border: none;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 3.4vh;
+  font-weight: 900;
+  outline: none;
 }
-    .btn:active {
-        top: 3px;
-        left: -3px;
-    }
-    .btn::before {
-        position: absolute;
-        display: block;
-        content: "";
-        top: 0px;
-        left: -6px;
-    }
-        .btn:active::before {
-            top: 0px;
-            left: -3px;
-    }
-    .btn::after {
-        position: absolute;
-        display: block;
-        content: "";
-        bottom: -5px;
-        right: 0px;
-    }
-        .btn:active::after {
-            bottom: -3px;
-            right: 0px;
-        }
 
-.btn-green{
-    background: green;
-    box-shadow: -6px 5px 0 hsl(140, 100%, 10%);
+.btn:active {
+  top: 3px;
+  left: -3px;
 }
-    .btn-green:hover{
-        background: hsl(120, 100%, 20%);
-    }
-    .btn-green:active{
-        background: hsl(120, 100%, 15%);
-        box-shadow: -3px 3px 0 hsl(140, 100%, 10%);
-    }
-    .btn-green::before{
-        border: solid 5px transparent;
-        border-right: solid 6px hsl(140, 100%, 10%);
-        border-left-width: 0px;
-    }
-        .btn-green:active::before{
-            border: solid 3px transparent;
-            border-right: solid 3px hsl(140, 100%, 10%);
-            border-left-width: 0px;
-        }
-    .btn-green:after{
-        border: solid 6px transparent;
-        border-top: solid 5px hsl(140, 100%, 10%);
-        border-bottom-width: 0px;
-    }
-        .btn-green:active::after{
-            border: solid 3px transparent;
-            border-top: solid 3px hsl(140, 100%, 10%);
-            border-bottom-width: 0px;
-        }
 
-.btn-red{
-    background: red;
-    box-shadow: -6px 5px 0 hsl(0, 100%, 20%);
+.btn::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0px;
+  left: -6px;
 }
-    .btn-red:hover{
-        background: hsl(0, 100%, 40%);
-    }
-    .btn-red:active{
-        background: hsl(0, 100%, 35%);
-        box-shadow: -3px 3px 0 hsl(0, 100%, 20%);
-    }
-    .btn-red::before{
-        border: solid 5px transparent;
-        border-right: solid 6px hsl(0, 100%, 20%);
-        border-left-width: 0px;
-    }
-        .btn-red:active::before{
-            border: solid 3px transparent;
-            border-right: solid 3px hsl(0, 100%, 20%);
-            border-left-width: 0px;
-        }
-    .btn-red:after{
-        border: solid 6px transparent;
-        border-top: solid 5px hsl(0, 100%, 20%);
-        border-bottom-width: 0px;
-    }
-        .btn-red:active::after{
-            border: solid 3px transparent;
-            border-top: solid 3px hsl(0, 100%, 20%);
-            border-bottom-width: 0px;
-        }
 
-.btn-blue{
-    background: hsl(220, 100%, 50%);
-    box-shadow: -6px 5px 0 hsl(220, 100%, 20%);
+.btn:active::before {
+  top: 0px;
+  left: -3px;
 }
-    .btn-blue:hover{
-        background: hsl(220, 100%, 43%);
-    }
-    .btn-blue:active{
-        background: hsl(220, 100%, 40%);
-        box-shadow: -3px 3px 0 hsl(220, 100%, 20%);
-    }
-    .btn-blue::before{
-        border: solid 5px transparent;
-        border-right: solid 6px hsl(220, 100%, 20%);
-        border-left-width: 0px;
-    }
-        .btn-blue:active::before{
-            border: solid 3px transparent;
-            border-right: solid 3px hsl(220, 100%, 20%);
-            border-left-width: 0px;
-        }
-    .btn-blue:after{
-        border: solid 6px transparent;
-        border-top: solid 5px hsl(220, 100%, 20%);
-        border-bottom-width: 0px;
-    }
-        .btn-blue:active::after{
-            border: solid 3px transparent;
-            border-top: solid 3px hsl(220, 100%, 20%);
-            border-bottom-width: 0px;
-        }
+
+.btn::after {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -5px;
+  right: 0px;
+}
+
+.btn:active::after {
+  bottom: -3px;
+  right: 0px;
+}
+
+.btn-green {
+  background: green;
+  -webkit-box-shadow: -6px 5px 0 #003311;
+          box-shadow: -6px 5px 0 #003311;
+}
+
+.btn-green:hover {
+  background: #006600;
+}
+
+.btn-green:active {
+  background: #004d00;
+  -webkit-box-shadow: -3px 3px 0 #003311;
+          box-shadow: -3px 3px 0 #003311;
+}
+
+.btn-green::before {
+  border: solid 5px transparent;
+  border-right: solid 6px #003311;
+  border-left-width: 0px;
+}
+
+.btn-green:active::before {
+  border: solid 3px transparent;
+  border-right: solid 3px #003311;
+  border-left-width: 0px;
+}
+
+.btn-green:after {
+  border: solid 6px transparent;
+  border-top: solid 5px #003311;
+  border-bottom-width: 0px;
+}
+
+.btn-green:active::after {
+  border: solid 3px transparent;
+  border-top: solid 3px #003311;
+  border-bottom-width: 0px;
+}
+
+.btn-red {
+  background: red;
+  -webkit-box-shadow: -6px 5px 0 #660000;
+          box-shadow: -6px 5px 0 #660000;
+}
+
+.btn-red:hover {
+  background: #cc0000;
+}
+
+.btn-red:active {
+  background: #b30000;
+  -webkit-box-shadow: -3px 3px 0 #660000;
+          box-shadow: -3px 3px 0 #660000;
+}
+
+.btn-red::before {
+  border: solid 5px transparent;
+  border-right: solid 6px #660000;
+  border-left-width: 0px;
+}
+
+.btn-red:active::before {
+  border: solid 3px transparent;
+  border-right: solid 3px #660000;
+  border-left-width: 0px;
+}
+
+.btn-red:after {
+  border: solid 6px transparent;
+  border-top: solid 5px #660000;
+  border-bottom-width: 0px;
+}
+
+.btn-red:active::after {
+  border: solid 3px transparent;
+  border-top: solid 3px #660000;
+  border-bottom-width: 0px;
+}
+
+.btn-blue {
+  background: #0055ff;
+  -webkit-box-shadow: -6px 5px 0 #002266;
+          box-shadow: -6px 5px 0 #002266;
+}
+
+.btn-blue:hover {
+  background: #0049db;
+}
+
+.btn-blue:active {
+  background: #0044cc;
+  -webkit-box-shadow: -3px 3px 0 #002266;
+          box-shadow: -3px 3px 0 #002266;
+}
+
+.btn-blue::before {
+  border: solid 5px transparent;
+  border-right: solid 6px #002266;
+  border-left-width: 0px;
+}
+
+.btn-blue:active::before {
+  border: solid 3px transparent;
+  border-right: solid 3px #002266;
+  border-left-width: 0px;
+}
+
+.btn-blue:after {
+  border: solid 6px transparent;
+  border-top: solid 5px #002266;
+  border-bottom-width: 0px;
+}
+
+.btn-blue:active::after {
+  border: solid 3px transparent;
+  border-top: solid 3px #002266;
+  border-bottom-width: 0px;
+}
+
 /* Attribution */
 .bottom {
-    font-size: 5px;
-    position: absolute;
-    margin: 0 auto;
-    bottom: 0;
+  font-size: 5px;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
 }
+
 /* Mobile Quick Fix */
 button {
-    touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 * {
   -webkit-backface-visibility: hidden;
 }
+/*# sourceMappingURL=dice.css.map */
